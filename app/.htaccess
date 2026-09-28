@@ -1,0 +1,17 @@
+RewriteEngine On
+
+
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+Header set Access-Control-Allow-Methods "GET , POST, PUT, DELETE, OPTIONS"
+
+
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ - [R=200, L] 
+
+Header set Content-Type "application/json; charset=utf-8"
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+Rewritecont %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
