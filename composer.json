@@ -1,0 +1,16 @@
+{
+  "name": "mario_soares/api-php",
+  "description": "Criando uma api em php com postgresSQL",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Controllers\\": "controllers/",
+      "Models\\": "models/",
+      "Services\\": "services/"
+    }
+  },
+  "require": {
+    "bramus/router": "^1.6",
+    "vlucas/phpdotenv": "*"
+  }
+}
